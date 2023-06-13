@@ -10,7 +10,6 @@ export default{
 
 <template>
   <PageMain />
-  <PageFooter />
 </template>
 
 <style lang="scss">

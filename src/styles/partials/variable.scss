@@ -2,3 +2,23 @@ $red: #ec4857;
 $white: #ffffff;
 $grey: #323844;
 $darkGrey: #252a33;
+
+.darkGreyBkg{
+    background-color: $darkGrey;
+}
+
+.greyBkg{
+    background-color: $grey;
+}
+
+.redBkg{
+    background-color: $red;
+}
+
+.whiteBkg{
+    background-color: $darkGrey;
+}
+
+.textGrey{
+    color: #6c757d;
+}
