@@ -4,7 +4,6 @@ import TextCenter from "./TextCenter.vue";
 import Card from "./Card.vue";
 import Cta from "./Cta.vue";
 import Accordion from "./Accordion.vue";
-import PageFooter from "./PageFooter.vue";
 import Buttons from "./Buttons.vue";
     export default {
       name: 'PageMain',
@@ -13,7 +12,7 @@ import Buttons from "./Buttons.vue";
 
             }
         },
-        components: { PageHeader, TextCenter, Card, Cta, Accordion, PageFooter, Buttons }
+        components: { PageHeader, TextCenter, Card, Cta, Accordion, Buttons }
        
     }
 </script>
@@ -27,13 +26,14 @@ import Buttons from "./Buttons.vue";
             <div class="row px-4 pb-4 pt-5 text-center text-white w-100">
                 <h1 class="display-1 fw-bold">Untold stories</h1>
                 <div class="col-lg-6 mx-auto">
-                    <p class="lead mb-4">There is an untold story behind every favourite song</p>
+                    <p class="lead mb-4 italic">There is an untold story behind every favourite song</p>
                     <Buttons primaryButtonTxt="Latest album" secondaryButtonTxt="Live dates" />
                 </div>
             </div>
         </section>
 
-        <section class="container-fluid below-hero text-white p-4">
+        <section class="container-fluid below-hero text-white p-4 position-relative">
+            <div class="decoration"></div>
             <TextCenter title="Music Is LIfe" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus cursus egestas. Cras quis vehicula quam, a tempus velit. Ut feugiat augue in sodales luctus" />
         </section>
 
@@ -86,11 +86,10 @@ import Buttons from "./Buttons.vue";
 
         <!-- Quote section -->
         <section class="container-fluid testimonial text-white p-5">
-
-                <div class="col-lg-6 mx-auto">
-                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus cursus egestas. Cras quis vehicula quam, a tempus velit. Ut feugiat augue in sodales luctus</p>
-                    <i class="bi bi-play-circle-fill fs-2"></i>
-                </div>
+            <div class="col-lg-6 mx-auto my-5">
+                <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus cursus egestas. Cras quis vehicula quam, a tempus velit. Ut feugiat augue in sodales luctus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus cursus egestas. Cras quis vehicula quam, a tempus velit. Ut feugiat augue in sodales luctus</p>
+                <i class="bi bi-play-circle-fill"></i>
+            </div>
         </section>
 
         <!-- accordion section -->
@@ -98,8 +97,6 @@ import Buttons from "./Buttons.vue";
             <Accordion />
         </section>
         <Cta text="View all latest dates"/>
-        <PageFooter />
-
     </section>
 
 </template>
@@ -132,6 +129,11 @@ import Buttons from "./Buttons.vue";
     object-fit: cover;
 }
 
+.bi-play-circle-fill{
+    font-size: 64px;
+    color: $red;
+}
+
 // .img-card-container{
 //     height: 200px;
 
@@ -145,6 +147,18 @@ import Buttons from "./Buttons.vue";
 
 .testimonial{
     background-image: url('./../assets/images/home-testimonial-parallax.jpg');
+    background-attachment: fixed;
+}
+
+.decoration{
+    width: 400px;
+    height: 10px;
+    background-color: $red;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 

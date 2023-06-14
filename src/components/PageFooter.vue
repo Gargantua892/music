@@ -36,7 +36,9 @@ import { store } from "./../store.js"
                     <li> Powered by WordPress </li>
                 </ul>
                 <ul class="navbar-nav flex-row gap-3 social">
-                    <li class="greyBkg" v-for="socialIcon in store.icons"><i :class="`bi ${socialIcon}`"></i></li>
+                    <li class="greyBkg" v-for="socialIcon in store.icons">
+                        <a href=""><i :class="`bi ${socialIcon}`"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -58,6 +60,10 @@ import { store } from "./../store.js"
 .social li{
     padding: 8px 12px;
     border-radius: 4px;
+
+    a{
+        color: #fff;
+    }
 }
 
 </style>

@@ -18,3 +18,8 @@ body {
   text-align: center;
   min-height: 100vh;
 }
+
+.italic{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
